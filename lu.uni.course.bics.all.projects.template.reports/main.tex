@@ -372,7 +372,9 @@ An answer to such question should be the result of applying partly or totally th
 As you can see in this template, the scientific deliverable is entirely separated from the technical deliverable. It the default case it addresses a question closely related to the technical deliverable.  
 
 \subsubsection{Technical deliverables}
-Provide a synthetic and abstract description of the technical deliverables that were targeted to be produced. A technical deliverable in this report is the description of a product  build by the student using software or hardware technologies.
+For this bachelor semester project, the target to reach is to create a software that could export an audio file of none, one or multiple songs which are defined by different criteria. 
+
+The program was planned to be written in python, a world-known programming language open-source which is widely used for its versatility and various libraries and modules. For this project, the musical module "pydub" had to be used to import and export songs with only the path of the audio file searched. Even if this module has more interesting features they normally will not be used for the code. A graphical user interface was expected to be done for the BSP with Tkinter, an python blinding easy to use and with a great documentation all over the internet.   Provide a synthetic and abstract description of the technical deliverables that were targeted to be produced. A technical deliverable in this report is the description of a product  build by the student using software or hardware technologies.
 
 
 % \subsection{Constraints}
@@ -395,11 +397,15 @@ It is important not to include in this section all the knowledge you have been o
 For each scientific deliverable targeted in section~\ref{sec-deliverables} provide a full section with all the subsections described below.
 \label{sec-production}
 \subsection{Requirements ($\pm$ 15\% of section's words)}
-Describe here all the properties that characterize the deliverables you produced. It should describe, for each main deliverable, what are the expected functional and non functional properties of the deliverables, who are the actors exploiting the deliverables. It is expected that you have at least one scientific deliverable (e.g. ``Scientific presentation of the Python programming language'', ``State of the art on quality models for human computer interaction'', \ldots.) and one technical deliverable (e.g. ``BSProSoft - A python/django web-site for IT job offers retrieval and analysis'', \ldots). 
+This scientific deliverable will cover different questions but all related to the main question which is "How can we evaluate the similarities between two instrumentals tracks". All the work in the production section will divided into parts of different questions we will answer to and they are all related one to each other to have an overview of the main scientific question. 
+
 \subsection{Design ($\pm$ 30\% of section's words)}
 Provide the necessary and most useful explanations on how those deliverables have been produced.
 \subsection{Production ($\pm$ 40\% of section's words)}
-Provide descriptions of the deliverables concrete production. It must present part of the deliverable (e.g. source code extracts, scientific work extracts, \ldots) to illustrate and explain its actual production.
+Since the starting of the millennium, engineers and scientists have been working for the past two decades on the music recognition. Constantly evolving, the different project became more and more efficient and quicker. The most known software for music recognition, Shazam, develloped by Shazam Entertainment Limited, is using a method to recognize songs called the "fingerprint algorithm" with the help of considerable databases relying on.
+This will be the base of our research to answer the question previously quoted, "How can we evaluate the similarities between two instrumentals tracks" ? But in a first place, let's answer the question : "How Shazam and other recognition software work" ? 
+In a way to analyse sound and get results, the software needs an input. Fortunately, nearly all the computers and mobile devices have a microphone input that can be used. The method of recognition a song by only a degraded sample is called the "audio fingerprint" and it consists grossly of analysing from a point in time, witch graphically represent the frequency of a musical note or from a rhythm in time. Those points are replaced on a time-frequency graphic that can be visualized. (insert picture from main doc). Those points are replaced and analysed in a way to see if it correspond to a song or if it has a lot of same points. From one random point the algorithm analyses next musical notes that are detected by the microphone and which are in a similar range of frequencies. This methods is called the "pattern matching" method. This is possible due to enormous databases (to continue)
+
 \subsection{Assessment ($\pm$ 15\% of section's words)}
 Provide any objective elements to assess that your deliverables do or do not satisfy the requirements described above. 
 
@@ -408,9 +414,24 @@ For each technical deliverable targeted in section~\ref{sec-deliverables} provid
 The cumulative volume of all deliverable sections represents 75\% of the paper's volume in words. Volumes below are indicated relative the the section.
 \label{sec-production}
 \subsection{Requirements ($\pm$ 15\% of section's words)}
-cf. section~\ref{sec-production} applied to the technical deliverable
+This BSP will be mainly rely on python programming language. Python is currently on of the most known programming language for it simplicity for the multiple extensions possible and widely supported on different operating systems.
+The technical part is partly based on audio manipulation and the library pydub is going to be used for this project. This library is not already implement in modern IDE because it is an external library. This library will be used to import song from their path, concatenate songs, one after the others and finally to export the final result by giving a name to the file we want to export, the audio file extension and the bitrate. 
+I will add more if there is any more tool the project will be needed
 \subsection{Design ($\pm$ 30\% of section's words)}
-cf. section~\ref{sec-production} applied to the technical deliverable
+
+Before starting to code the actual program, a mock up was made using Miro, a free website and application whose main functionality is to let the user create a mock up with tools integrated. This platform is also used for meetings, brainstorming with other people and to manage and plan for a work team. Here is the realised mock up for this project : 
+
+(insert the mockup)
+
+This platform was advised by the tutor of this project for the intuitive interface, the variety of tools proposed, and the convincing result a user can achieve without using it before. The realised mock up used only a few functionalities that were proposed because it was not an important part of this project and it has been used to show only how the program would work and ,if achieved, a design for the software produced. After that, this mock up is used as a template to remind the main function that the program offers and how it operates. 
+
+The actual program runs in python, an open source programming language that offers a diversity of very useful libraries when it comes to manipulates different type of files or creating a program that is not only based on the basic functionalities of python. For manipulating audio files there are several libraries that can be used, but for the purpose of this Bachelor Semester Project the simplicity and capability of the Pydub library corresponded to the program needs. Published firstly in 2011, Pydub created by James Robert has been upgraded and is still upgraded nowadays, for the purpose of this project the functionalities of importing, exporting and concatenating songs. Using this library has multiples advantages. Firstly, it is one of the most used libraries for audio file manipulations, it has a decent amount of documentation all over the internet and the commends are really intuitive and does corporate well with the python programming language.
+
+To insert the data about the audio files containing tracks, we will use a simple text file. with on each line having the different information about the songs separated by a comma. This file is after interpreted when the user launches the program. This technique is a very good idea, instead having every description of every songs in the real python program and make it less readable, to have an external text file has several advantages and the open built-in function from python is clear and is an old functionality. Even thought the actual code is not complex and does not have a great length, it remains better to keep data in another file to not disturb the main program.
+
+The program uses class to define criteria the project will rely on classes. 
+
+
 \subsection{Production ($\pm$ 40\% of section's words)}
 cf. section~\ref{sec-production} applied to the technical deliverable
 \subsection{Assessment ($\pm$ 15\% of section's words)}
